@@ -1,0 +1,26 @@
+{
+  "name": "jwlr-nx",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/jwlr-nx/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "jwlr-nx:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "jwlr-nx:build:development"
+        },
+        "production": {
+          "buildTarget": "jwlr-nx:build:production"
+        }
+      }
+    }
+  }
+}
