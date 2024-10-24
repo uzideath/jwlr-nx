@@ -1,12 +1,32 @@
-<mat-toolbar color="primary" class="bg-black text-white">
-    <span class="flex-grow">JWLR</span>
-    <button mat-icon-button>
-      <mat-icon>search</mat-icon>
-    </button>
-    <button mat-icon-button>
+<div>
+  <mat-toolbar class="bg-red-700 text-white">
+    <span class="flex-grow text-2xl font-bold">JWLR</span>
+    
+<div class="relative">
+  <mat-icon class="absolute left-3 top-1/2 transform -translate-y-1/2 text-white">search</mat-icon>
+  <input type="text" placeholder="Search..." 
+         class="bg-gray-800 text-white px-4 py-2 rounded-full focus:outline-none hover:bg-gray-700 pl-10">
+</div>
+
+
+
+    <button mat-icon-button class="text-white hover:text-rose-200">
       <mat-icon>person</mat-icon>
     </button>
-    <button mat-icon-button>
+    <button mat-icon-button class="text-white hover:text-rose-200">
       <mat-icon>shopping_bag</mat-icon>
     </button>
+    <button mat-icon-button class="text-white hover:text-rose-200">
+      <mat-icon>favorite_border</mat-icon>
+    </button>
   </mat-toolbar>
+
+  <ul class="category-list flex flex-row">
+    <li *ngFor="let category of categories">
+      <a href="#" (click)="onCategoryClick(category)" class="category-link">
+        {{ category.name }}
+      </a>
+    </li>
+  </ul>
+
+</div>

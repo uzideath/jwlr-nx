@@ -1,0 +1,17 @@
+.category-list {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.category-link {
+  display: block; /* Make each link a block element for vertical alignment */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit the text color from the parent */
+  padding: 10px; /* Add some padding for better spacing */
+  border-bottom: 1px solid #ccc; /* Optional: Add a bottom border to separate items */
+
+  &:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    cursor: pointer; /* Change cursor to pointer when hovering */
+  }
+}
